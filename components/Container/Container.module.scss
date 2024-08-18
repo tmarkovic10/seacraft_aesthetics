@@ -1,0 +1,39 @@
+.root {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $padding;
+  padding-right: $padding;
+
+  @include media(0, "lg") {
+    padding-left: $padding-mobile;
+    padding-right: $padding-mobile;
+  }
+
+  // Disable Gutters
+  &.noGutters {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  // Max Width
+  &.xs {
+    max-width: map-get($breakpoints, "xs");
+  }
+
+  &.sm {
+    max-width: map-get($breakpoints, "sm");
+  }
+
+  &.md {
+    max-width: map-get($breakpoints, "md");
+  }
+
+  &.xl {
+    max-width: map-get($breakpoints, "xl");
+  }
+
+  &.lg {
+    max-width: map-get($breakpoints, "lg");
+  }
+}
