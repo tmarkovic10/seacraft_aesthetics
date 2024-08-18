@@ -1,12 +1,11 @@
 import Container from "@/components/Container";
-import Typography from "@/components/Typography";
+import HeroSection from "@/views/home/HeroSection";
 
 export default function Home() {
   return (
     <main>
-      <Container component="section">
-        <Typography variant="h1">Hello</Typography>
-      </Container>
+      <HeroSection />
+      <div style={{ height: "100vh" }}></div>
     </main>
   );
 }

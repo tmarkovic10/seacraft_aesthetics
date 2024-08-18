@@ -1,19 +1,44 @@
 @import "@/styles/mixins/underline";
 
 .container {
-  max-width: $container-max-width;
   font-family: $secondary-font-family;
-  padding: rem-calc(42 0 42 0);
-  //   background-color: red;
+  padding: rem-calc(0 104 0 104);
+  position: fixed;
+  z-index: 1000;
+  transition:
+    background-color 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
+  background-color: transparent;
+
+  &.hidden {
+    transform: translateY(-100%);
+  }
+
+  &.scrolled {
+    background-color: $white;
+  }
 
   .grid {
+    max-width: $container-max-width;
+    padding: rem-calc(42 0 42 0);
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: $white;
+
+    &.scrolled {
+      color: $primary;
+    }
 
     .links {
       display: flex;
       gap: rem-calc(32);
+
+      @include media(0, "sm") {
+        display: none;
+      }
 
       li {
         display: flex;
