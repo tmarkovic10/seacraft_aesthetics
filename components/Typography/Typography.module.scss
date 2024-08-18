@@ -1,0 +1,45 @@
+@import "@/styles/utils/typographies";
+
+.root {
+  // Headlines
+  &.h1 {
+    @extend %h1;
+  }
+
+  &.h2 {
+    @extend %h2;
+  }
+
+  &.h3 {
+    @extend %h3;
+  }
+
+  &.h4 {
+    @extend %h4;
+  }
+
+  &.h5 {
+    @extend %h5;
+  }
+
+  &.subtitle1 {
+    @extend %subtitle-1;
+  }
+
+  &.subtitle2 {
+    @extend %subtitle-2;
+  }
+
+  // Body
+  &.body1 {
+    @extend %body-1;
+  }
+
+  &.body2 {
+    @extend %body-2;
+  }
+
+  &.body3 {
+    @extend %body-3;
+  }
+}
