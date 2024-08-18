@@ -1,6 +1,8 @@
 import React from "react";
 import type { Metadata } from "next";
+
 import Lenis from "@/components/Lenis";
+import Header from "@/components/Header";
 
 import "@/styles/index.scss";
 
@@ -17,6 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <Header />
         <Lenis>{children}</Lenis>
       </body>
     </html>

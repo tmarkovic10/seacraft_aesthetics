@@ -1,0 +1,11 @@
+@mixin underline($bottom: 4, $width: 2px, $color: currentColor) {
+  background: linear-gradient($color 0 0) bottom left/$width 100% no-repeat;
+  padding-bottom: rem-calc($bottom);
+  background-size: 0 $width;
+  transition: background-size 0.3s cubic-bezier(0.36, 1, 0.42, 1);
+
+  &:hover {
+    background-size: 100% $width;
+    transition-duration: 0.5s;
+  }
+}

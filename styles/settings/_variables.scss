@@ -21,6 +21,7 @@ $breakpoints: (
   xl: 1280px,
 );
 $max-width: map-get($breakpoints, "xl");
+$container-max-width: rem-calc(1440);
 $padding: rem-calc(120);
 $padding-mobile: rem-calc(24);
 
