@@ -23,8 +23,8 @@ $breakpoints: (
 );
 $max-width: map-get($breakpoints, "xl");
 $container-max-width: rem-calc(1440);
-$padding: rem-calc(120);
-$padding-mobile: rem-calc(24);
+$padding: rem-calc(120 104 120 104);
+$padding-mobile: rem-calc(60 24 60 24);
 
 $navbar-height: 3.75rem;
 $mobile-navbar-height: 4.5rem;

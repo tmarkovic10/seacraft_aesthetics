@@ -1,11 +1,12 @@
 import Container from "@/components/Container";
+import AboutSection from "@/views/home/AboutSection";
 import HeroSection from "@/views/home/HeroSection";
 
 export default function Home() {
   return (
     <main>
       <HeroSection />
-      <div style={{ height: "100vh" }}></div>
+      <AboutSection />
     </main>
   );
 }

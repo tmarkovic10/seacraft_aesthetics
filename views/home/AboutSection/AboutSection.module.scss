@@ -1,0 +1,28 @@
+.container {
+  padding: $padding;
+  max-width: $container-max-width;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: rem-calc(32);
+
+  @include media(0, "sm") {
+    padding: $padding-mobile;
+  }
+
+  .imageContainer {
+    position: relative;
+    height: rem-calc(200);
+    width: rem-calc(500);
+
+    @include media(0, "sm") {
+      width: 100%;
+    }
+  }
+
+  .description {
+    max-width: rem-calc(760);
+    text-align: center;
+    color: $primary;
+  }
+}
