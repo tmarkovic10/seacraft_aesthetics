@@ -1,0 +1,56 @@
+@import "@/styles/mixins/underline";
+
+.container {
+  background-color: $primary;
+  width: 100%;
+
+  .wrapper {
+    padding: $padding;
+    max-width: $container-max-width;
+    margin: 0 auto;
+
+    @include media(0, "md") {
+      padding: $padding-mobile;
+    }
+
+    .title {
+      color: $dark-blue;
+    }
+
+    .serviceWrapper {
+      margin-top: rem-calc(96);
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: rem-calc(24);
+
+      @include media(0, "sm") {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+
+    .seeMore {
+      margin-top: rem-calc(48);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: rem-calc(8);
+      max-width: rem-calc(120);
+      margin-left: auto;
+      margin-right: auto;
+
+      @include underline($color: transparent);
+
+      svg {
+        transition: transform 0.3s ease;
+      }
+
+      &:hover {
+        @include underline($color: $dark-blue);
+
+        svg {
+          transform: translateX(rem-calc(4));
+        }
+      }
+    }
+  }
+}

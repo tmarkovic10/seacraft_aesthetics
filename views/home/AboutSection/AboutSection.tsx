@@ -2,9 +2,9 @@ import React from "react";
 import Image from "next/image";
 
 import Container from "@/components/Container";
+import Typography from "@/components/Typography";
 
 import styles from "./AboutSection.module.scss";
-import Typography from "@/components/Typography";
 
 const AboutSection = () => {
   return (
