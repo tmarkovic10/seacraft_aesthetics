@@ -1,11 +1,11 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 
 import Container from "@/components/Container";
 
 import styles from "./HeroSection.module.scss";
 import Typography from "@/components/Typography";
+import LinkButton from "@/components/LinkButton";
 
 const HeroSection = () => {
   return (
@@ -29,7 +29,7 @@ const HeroSection = () => {
         <Typography variant="body1" className={styles.text}>
           Osvježite svoj brod do savršenstva
         </Typography>
-        <Link href="#"></Link>
+        <LinkButton href="#" text="Saznaj više" />
       </div>
     </Container>
   );

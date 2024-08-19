@@ -1,7 +1,6 @@
 @import "@/styles/mixins/underline";
 
 .container {
-  font-family: $secondary-font-family;
   padding: rem-calc(0 104 0 104);
   position: fixed;
   z-index: 1000;
@@ -47,7 +46,7 @@
           @include underline($color: transparent);
 
           &:hover {
-            @include underline($color: $primary);
+            @include underline($color: $secondary);
           }
         }
       }
