@@ -1,0 +1,25 @@
+.container {
+  padding-top: rem-calc(136);
+  background-color: $primary;
+
+  .wrapper {
+    padding: $padding;
+    max-width: $container-max-width;
+    margin: 0 auto;
+    color: $dark-blue;
+
+    @include media(0, "md") {
+      padding: $padding-mobile;
+    }
+
+    .content {
+      display: flex;
+    }
+
+    .compareSlider {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+  }
+}
