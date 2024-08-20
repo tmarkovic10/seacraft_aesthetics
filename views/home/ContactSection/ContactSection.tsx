@@ -12,13 +12,17 @@ const ContactSection = () => {
   return (
     <Container component="section" className={styles.container}>
       <div className={styles.wrapper}>
-        <Typography variant="h1" component="h2" className={styles.title}>
+        <Typography variant="h2" className={styles.title}>
           Kontaktirajte nas
+        </Typography>
+        <Typography variant="body1" className={styles.text}>
+          Za bilo kakva pitanja ili informacije, slobodno nas kontaktirajte
+          putem e-maila ili telefona
         </Typography>
         <div className={styles.contactWrapper}>
           <Link href="tel:+385958710939" className={styles.contactItem}>
             <div className={styles.contactIcon}>
-              <Phone />
+              <Phone className={styles.icon} />
             </div>
             <Typography variant="body1">+385 95 8710 939</Typography>
           </Link>
