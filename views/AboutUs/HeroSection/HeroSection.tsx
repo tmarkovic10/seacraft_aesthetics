@@ -1,9 +1,5 @@
 import React from "react";
-
-import {
-  ReactCompareSlider,
-  ReactCompareSliderImage,
-} from "react-compare-slider";
+import Image from "next/image";
 
 import Container from "@/components/Container";
 import Typography from "@/components/Typography";
@@ -13,43 +9,30 @@ import styles from "./HeroSection.module.scss";
 const HeroSection = () => {
   return (
     <Container component="section" className={styles.container}>
-      <div className={styles.wrapper}>
-        <div className={styles.content}>
-          <div style={{ height: 300, width: 300, backgroundColor: "red" }} />
-          <div>
-            <Typography variant="h1">O nama</Typography>
-            <Typography variant="body1">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima,
-              accusamus mollitia obcaecati numquam corporis culpa deleniti nam
-              in, perferendis fuga, facere aliquam corrupti necessitatibus
-              itaque praesentium labore debitis possimus illum.
-            </Typography>
-          </div>
-        </div>
-        <div className={styles.compareSlider}>
-          <ReactCompareSlider
-            boundsPadding={0}
-            itemOne={
-              <ReactCompareSliderImage
-                alt="Image one"
-                src="https://raw.githubusercontent.com/nerdyman/stuff/main/libs/react-compare-slider/demo-images/dark-hedges-landscape-1.jpg"
-              />
-            }
-            itemTwo={
-              <ReactCompareSliderImage
-                alt="Image two"
-                src="https://raw.githubusercontent.com/nerdyman/stuff/main/libs/react-compare-slider/demo-images/dark-hedges-landscape-2.jpg"
-              />
-            }
-            keyboardIncrement="5%"
-            onlyHandleDraggable
-            position={50}
-            style={{
-              flexGrow: 1,
-              width: "100%",
-            }}
-          />
-        </div>
+      <div className={styles.imageContainer}>
+        <Image
+          src="/images/service2/item1.jpg"
+          alt="img"
+          fill
+          style={{ objectFit: "cover" }}
+        />
+      </div>
+      <div className={styles.textContainer}>
+        <Typography variant="h1" className={styles.title}>
+          O nama
+        </Typography>
+        <Typography variant="body1" className={styles.text}>
+          Seacraft Aesthetics je mali mobilni tim koji nudi profesionalno
+          poliranje brodova i uređenje unutarnjih i vanjskih površina plovila.
+          Naša strast prema pomorstvu i predanost kvaliteti omogućuju nam da vaš
+          brod vratimo u besprijekorno stanje. Specijalizirani smo za poliranje
+          brodova te unutarnje i vanjsko uređenje, koristeći najmodernije
+          tehnologije i materijale. Bilo da se radi o detaljnom čišćenju, obnovi
+          sjaja ili kompletnoj rekonstrukciji interijera, naš stručni tim
+          osigurava vrhunsku uslugu i zadovoljstvo naših klijenata. Povjerite
+          nam svoje plovilo i uživajte u besprijekornoj ljepoti i
+          funkcionalnosti koju pružamo.
+        </Typography>
       </div>
     </Container>
   );

@@ -1,25 +1,37 @@
 .container {
-  padding-top: rem-calc(136);
-  background-color: $primary;
+  display: flex;
+  gap: rem-calc(48);
 
-  .wrapper {
-    padding: $padding;
-    max-width: $container-max-width;
-    margin: 0 auto;
-    color: $dark-blue;
+  @include media(0, "lg") {
+    flex-direction: column-reverse;
+  }
 
-    @include media(0, "md") {
-      padding: $padding-mobile;
+  .imageContainer {
+    position: relative;
+    display: flex;
+    width: 100%;
+    flex: 1;
+
+    @include media(0, "lg") {
+      flex: auto;
+      height: rem-calc(400);
+    }
+  }
+
+  .textContainer {
+    flex: 1;
+    width: 100%;
+
+    .title {
+      font-weight: 500;
+
+      @include media(0, "lg") {
+        text-align: center;
+      }
     }
 
-    .content {
-      display: flex;
-    }
-
-    .compareSlider {
-      display: flex;
-      flex-direction: column;
-      flex-grow: 1;
+    .text {
+      margin-top: rem-calc(24);
     }
   }
 }
