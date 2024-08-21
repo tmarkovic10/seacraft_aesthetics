@@ -10,7 +10,7 @@ import styles from "./Contact.module.scss";
 
 const ContactSection = () => {
   return (
-    <Container component="section" className={styles.container}>
+    <Container component="section" id="contact" className={styles.container}>
       <div className={styles.wrapper}>
         <Typography variant="h2" className={styles.title}>
           Kontaktirajte nas

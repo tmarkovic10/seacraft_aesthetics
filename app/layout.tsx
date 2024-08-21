@@ -1,7 +1,7 @@
 import React from "react";
 import type { Metadata } from "next";
 
-import Lenis from "@/components/Lenis";
+import Providers from "./providers";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Header />
-        <Lenis>{children}</Lenis>
+        <Providers>{children}</Providers>
         <Footer />
       </body>
     </html>

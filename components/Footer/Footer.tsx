@@ -1,24 +1,19 @@
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
 
 import Container from "@/components/Container";
 
 import styles from "./Footer.module.scss";
 import navigationLinks from "@/config/navigationLinks";
-import Typography from "../Typography";
+import Typography from "@/components/Typography";
+import Logo from "@/components/SvgIcons/Logo";
 
 const Footer = () => {
   return (
     <Container component="footer" className={styles.container}>
       <div className={styles.wrapper}>
         <Link href="/" aria-label="logo">
-          <Image
-            src="/images/seacraft-aesthetics-logo.png"
-            alt="Seacraft Aesthetics logo"
-            width={110}
-            height={50}
-          />
+          <Logo height={35} width={100} fillColor1="#fff" fillColor2="#fff" />
         </Link>
         <nav>
           <ul className={styles.links}>

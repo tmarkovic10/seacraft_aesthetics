@@ -1,68 +1,108 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
-import Image from "next/image";
 
+import { useLenis } from "lenis/react";
 import cx from "clsx";
 
 import Container from "@/components/Container";
 import Typography from "@/components//Typography";
+import Logo from "@/components/SvgIcons/Logo";
 import navigationLinks from "@/config/navigationLinks";
 
 import styles from "./Header.module.scss";
 
 const Header = () => {
-  const [hideOnScroll, setHideOnScroll] = useState<boolean>(false);
-  const [hasScrolled, setHasScrolled] = useState<boolean>(false);
-  const [prevScrollPos, setPrevScrollPos] = useState<number>(0);
+  const [hasScrolled, setHasScrolled] = useState(false);
+  const [activeHref, setActiveHref] = useState<string>("");
+  const pathname = usePathname();
+  const lenis = useLenis();
+  const isHome = pathname == "/";
 
-  const handleScroll = () => {
-    const currentScrollPos = window.scrollY;
-    const isScrolledDown = currentScrollPos > prevScrollPos;
-
-    setHideOnScroll(isScrolledDown && currentScrollPos > 50);
-    setPrevScrollPos(currentScrollPos);
-
-    setHasScrolled(currentScrollPos > 0);
-  };
+  const sectionId = "contact";
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [prevScrollPos]);
+  }, [hasScrolled]);
+
+  const handleScroll = () => {
+    const currentScrollPos = window.scrollY;
+
+    if (currentScrollPos > 100 && !hasScrolled) {
+      setHasScrolled(true);
+    } else if (currentScrollPos <= 100 && hasScrolled) {
+      setHasScrolled(false);
+    }
+  };
+
+  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const { hash } = e.currentTarget;
+
+    if (hash) {
+      const id = hash.substring(1);
+      const section = document.getElementById(id);
+
+      if (section && lenis) {
+        lenis.scrollTo(section);
+      }
+    }
+  };
+
+  const isActiveLink = (linkPath: string) => pathname === linkPath;
 
   return (
     <Container
       component="header"
       className={cx(styles.container, {
-        [styles.hidden]: hideOnScroll,
         [styles.scrolled]: hasScrolled,
       })}
     >
-      <div className={cx(styles.grid, { [styles.scrolled]: hasScrolled })}>
+      <div
+        className={cx(styles.grid, {
+          [styles.scrolled]: hasScrolled,
+          [styles.isHome]: isHome,
+        })}
+      >
         <Link href="/" aria-label="logo">
-          <Image
-            src="/images/seacraft-aesthetics-logo.png"
-            alt="Seacraft Aesthetics logo"
-            width={110}
-            height={50}
+          <Logo
+            height={35}
+            width={100}
+            fillColor1={isHome ? (hasScrolled ? "#023449" : "#fff") : "#023449"}
+            fillColor2={isHome ? (hasScrolled ? "#023449" : "#fff") : "#023449"}
           />
         </Link>
-        <nav>
+        <nav className={styles.linksWrapper}>
           <ul className={styles.links}>
             {navigationLinks.map((item) => (
               <li key={item.text}>
-                <Link href={item.href} className={styles.link}>
+                <Link
+                  href={item.href}
+                  className={cx(styles.link, {
+                    [styles.active]: isActiveLink(item.href),
+                  })}
+                >
                   <Typography variant="body2">{item.text}</Typography>
                 </Link>
               </li>
             ))}
           </ul>
+          {isHome && (
+            <Link
+              href={`/#${sectionId}`}
+              onClick={scrollToSection}
+              className={cx(styles.contactLink, {
+                [styles.scrolled]: hasScrolled,
+                [styles.isHome]: isHome,
+              })}
+            >
+              <Typography variant="body2">Kontakt</Typography>
+            </Link>
+          )}
         </nav>
-        <Link href="#" className={styles.contactLink}>
-          Kontakt
-        </Link>
       </div>
     </Container>
   );
