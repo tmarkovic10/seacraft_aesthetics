@@ -90,18 +90,16 @@ const Header = () => {
               </li>
             ))}
           </ul>
-          {isHome && (
-            <Link
-              href={`/#${sectionId}`}
-              onClick={scrollToSection}
-              className={cx(styles.contactLink, {
-                [styles.scrolled]: hasScrolled,
-                [styles.isHome]: isHome,
-              })}
-            >
-              <Typography variant="body2">Kontakt</Typography>
-            </Link>
-          )}
+          <Link
+            href={`/#${sectionId}`}
+            onClick={scrollToSection}
+            className={cx(styles.contactLink, {
+              [styles.scrolled]: hasScrolled,
+              [styles.isHome]: isHome,
+            })}
+          >
+            <Typography variant="body2">Kontakt</Typography>
+          </Link>
         </nav>
       </div>
     </Container>

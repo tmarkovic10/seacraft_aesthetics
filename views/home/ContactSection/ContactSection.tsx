@@ -1,6 +1,8 @@
 import React from "react";
 import Link from "next/link";
 
+import cx from "clsx";
+
 import Container from "@/components/Container";
 import Typography from "@/components/Typography";
 import Phone from "@/components/SvgIcons/Phone";
@@ -8,9 +10,17 @@ import Mail from "@/components/SvgIcons/Mail";
 
 import styles from "./Contact.module.scss";
 
-const ContactSection = () => {
+interface ContactSectionProps {
+  isHome?: boolean;
+}
+
+const ContactSection = ({ isHome }: ContactSectionProps) => {
   return (
-    <Container component="section" id="contact" className={styles.container}>
+    <Container
+      component="section"
+      id="contact"
+      className={cx(styles.container, { [styles.isHome]: isHome })}
+    >
       <div className={styles.wrapper}>
         <Typography variant="h2" className={styles.title}>
           Kontaktirajte nas

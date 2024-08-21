@@ -1,6 +1,10 @@
 .container {
-  background-color: $white;
+  background-color: $primary;
   width: 100%;
+
+  &.isHome {
+    background-color: $white;
+  }
 
   .wrapper {
     padding: $padding;
