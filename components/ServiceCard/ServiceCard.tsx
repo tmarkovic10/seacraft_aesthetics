@@ -8,11 +8,12 @@ import { Image as ImageType } from "@/types/image";
 import styles from "./ServiceCard.module.scss";
 
 interface ServiceCardProps {
+  id: number;
   title: string;
   image: ImageType;
 }
 
-const ServiceCard = ({ title, image }: ServiceCardProps) => {
+const ServiceCard = ({ id, title, image }: ServiceCardProps) => {
   return (
     <div className={styles.container}>
       <div className={styles.imageContainer}>
@@ -29,7 +30,7 @@ const ServiceCard = ({ title, image }: ServiceCardProps) => {
         </Typography>
       </div>
       <div className={styles.overlay}>
-        <LinkButton href="#" text="Learn more" />
+        <LinkButton href={`services/${id}`} text="Learn more" />
       </div>
     </div>
   );

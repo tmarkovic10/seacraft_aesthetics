@@ -15,7 +15,12 @@ const ServicesSection = () => {
       </Typography>
       <div className={styles.servicesWrapper}>
         {services.map((item) => (
-          <ServiceCard key={item.title} title={item.title} image={item.image} />
+          <ServiceCard
+            key={item.title}
+            id={item.id}
+            title={item.title}
+            image={item.image}
+          />
         ))}
         <div className={styles.contactCard}>
           <Typography variant="body1">Imate pitanje?</Typography>

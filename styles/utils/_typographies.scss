@@ -2,7 +2,7 @@
 %h1 {
   font-family: $primary-font-family;
   font-size: rem-calc(72);
-  font-weight: 400;
+  font-weight: 500;
   line-height: 120%;
 
   @include media(0, "sm") {

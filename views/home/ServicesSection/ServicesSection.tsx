@@ -19,6 +19,7 @@ const ServicesSection = () => {
         <div className={styles.serviceWrapper}>
           {services.slice(0, 4).map((item) => (
             <ServiceCard
+              id={item.id}
               key={item.title}
               title={item.title}
               image={item.image}
