@@ -33,7 +33,7 @@
       justify-content: space-around;
       align-items: center;
 
-      @include media(0, "md") {
+      @include media(0, "lg") {
         flex-direction: column;
         gap: rem-calc(48);
       }

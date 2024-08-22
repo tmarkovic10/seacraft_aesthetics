@@ -25,7 +25,7 @@ const ServicesSection = () => {
             />
           ))}
         </div>
-        <Link href="#" className={styles.seeMore}>
+        <Link href="/services" className={styles.seeMore}>
           <Typography variant="body2">Pogledaj sve</Typography>
           <ArrowRight />
         </Link>
