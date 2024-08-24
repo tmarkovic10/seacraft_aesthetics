@@ -18,8 +18,12 @@
         flex: 0 0 var(--slide-size);
         min-width: 0;
         padding-left: var(--slide-spacing);
-        height: 400px;
+        height: rem-calc(500);
         position: relative;
+
+        @include media(0, "sm") {
+          height: rem-calc(400);
+        }
 
         .slideNumber {
           box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);

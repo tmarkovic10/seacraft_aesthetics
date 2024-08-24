@@ -8,25 +8,37 @@ import Typography from "@/components/Typography";
 import Carousel from "@/components/Carousel";
 
 import styles from "./DetailsSection.module.scss";
+import Feature from "@/components/SvgIcons/Feature";
 
 const OPTIONS: EmblaOptionsType = {};
-const SLIDE_COUNT = 5;
-const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
 interface DetailsSectionProps {
   service: Services;
 }
 
 const DetailsSection = ({ service }: DetailsSectionProps) => {
-  const { title, carouselImages } = service;
+  const { title, description, features, carouselImages } = service;
 
   return (
     <Container className={styles.container}>
       <Typography variant="h1" className={styles.title}>
         {title}
       </Typography>
-      <div className={styles.sliderContainer}>
-        <Carousel slides={carouselImages} options={OPTIONS} />
+      <div className={styles.serviceWrapper}>
+        <div className={styles.serviceDetails}>
+          <Typography variant="body1">{description}</Typography>
+          <ul className={styles.services}>
+            {features.map((item, index) => (
+              <li key={index} className={styles.serviceItem}>
+                <Feature />
+                <Typography variant="body2">{item}</Typography>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className={styles.serviceSlider}>
+          <Carousel slides={carouselImages} options={OPTIONS} />
+        </div>
       </div>
     </Container>
   );

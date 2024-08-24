@@ -3,7 +3,37 @@
     text-align: center;
   }
 
-  .sliderContainer {
-    height: 500px;
+  .serviceWrapper {
+    margin-top: rem-calc(64);
+    display: flex;
+    gap: rem-calc(64);
+
+    @include media(0, "lg") {
+      flex-direction: column;
+    }
+
+    .serviceDetails {
+      flex: 1;
+
+      .services {
+        background-color: $white;
+        margin-top: rem-calc(24);
+        padding: rem-calc(24);
+        border-radius: rem-calc(8);
+        display: flex;
+        flex-direction: column;
+        gap: rem-calc(16);
+
+        .serviceItem {
+          display: flex;
+          align-items: center;
+          gap: rem-calc(16);
+        }
+      }
+    }
+
+    .serviceSlider {
+      flex: 1;
+    }
   }
 }
