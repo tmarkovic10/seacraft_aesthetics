@@ -12,8 +12,9 @@ const HeroSection = () => {
       <div className={styles.imageContainer}>
         <Image
           src="/images/service2/item1.webp"
-          alt="img"
+          alt="boat"
           fill
+          sizes="(max-width: 640px) 100vw, 50vw"
           style={{ objectFit: "cover" }}
         />
       </div>

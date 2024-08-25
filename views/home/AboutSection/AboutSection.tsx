@@ -12,7 +12,8 @@ const AboutSection = () => {
       <div className={styles.imageContainer}>
         <Image
           src="/images/about-image.jpg"
-          alt="s"
+          alt="cleaning kit"
+          sizes="50vw"
           fill
           style={{ objectFit: "contain" }}
         />

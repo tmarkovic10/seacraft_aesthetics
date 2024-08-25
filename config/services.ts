@@ -17,7 +17,7 @@ const services: Services[] = [
       "Za očuvanje optimalne funkcionalnosti i dugotrajne zaštite podvodnog dijela vašeg plovila, nudimo sveobuhvatan set usluga održavanja, uključujući:",
     image: {
       src: "/images/service1/item1.webp",
-      alt: "boat",
+      alt: "service",
     },
     features: [
       "Ispiranje slatkom vodom pod visokim tlakom",
@@ -30,27 +30,27 @@ const services: Services[] = [
     carouselImages: [
       {
         src: "/images/service1/service2.webp",
-        alt: "boat",
+        alt: "service",
       },
       {
         src: "/images/service1/service1.webp",
-        alt: "boat",
+        alt: "service",
       },
       {
         src: "/images/service1/service3.webp",
-        alt: "boat",
+        alt: "service",
       },
       {
         src: "/images/service1/service4.webp",
-        alt: "boat",
+        alt: "service",
       },
       {
         src: "/images/service1/service5.webp",
-        alt: "boat",
+        alt: "service",
       },
       {
         src: "/images/service1/service6.webp",
-        alt: "boat",
+        alt: "service",
       },
     ],
   },
@@ -61,7 +61,7 @@ const services: Services[] = [
       "Za postizanje besprijekornog izgleda i dugotrajne zaštite vašeg plovila, nudimo kompletan spektar usluga poliranja i održavanja vanjskih površina, uključujući:",
     image: {
       src: "/images/service2/item1.webp",
-      alt: "boat",
+      alt: "service",
     },
     features: [
       "Čišćenje plovila visokotlačnim uređajima",
@@ -80,23 +80,23 @@ const services: Services[] = [
     carouselImages: [
       {
         src: "/images/service2/service2.webp",
-        alt: "boat",
+        alt: "service",
       },
       {
         src: "/images/service2/service3.webp",
-        alt: "boat",
+        alt: "service",
       },
       {
         src: "/images/service2/service4.webp",
-        alt: "boat",
+        alt: "service",
       },
       {
         src: "/images/service2/service1.webp",
-        alt: "boat",
+        alt: "service",
       },
       {
         src: "/images/service2/service5.webp",
-        alt: "boat",
+        alt: "service",
       },
     ],
   },
@@ -106,29 +106,29 @@ const services: Services[] = [
     description: "",
     image: {
       src: "/images/service1/item1.webp",
-      alt: "boat",
+      alt: "service",
     },
     features: ["Čišćenje plovila visokotlačnim uređajima"],
     carouselImages: [
       {
         src: "/images/service3/service2.webp",
-        alt: "boat",
+        alt: "service",
       },
       {
         src: "/images/service3/service1.webp",
-        alt: "boat",
+        alt: "service",
       },
       {
         src: "/images/service3/service3.webp",
-        alt: "boat",
+        alt: "service",
       },
       {
         src: "/images/service3/service4.webp",
-        alt: "boat",
+        alt: "service",
       },
       {
         src: "/images/service3/service5.webp",
-        alt: "boat",
+        alt: "service",
       },
     ],
   },
@@ -139,7 +139,7 @@ const services: Services[] = [
       "Za maksimalnu zaštitu i očuvanje vašeg plovila tijekom skladištenja i transporta, nudimo cjelovitu uslugu primjene termoskupljajućih folija.",
     image: {
       src: "/images/service4/service1.webp",
-      alt: "boat",
+      alt: "service",
     },
     features: [
       "Zaštita od vremenskih uvjeta",
@@ -151,7 +151,7 @@ const services: Services[] = [
     carouselImages: [
       {
         src: "/images/service4/service1.webp",
-        alt: "boat",
+        alt: "service",
       },
     ],
   },
@@ -161,13 +161,13 @@ const services: Services[] = [
     description: "",
     image: {
       src: "/images/service5/service1.webp",
-      alt: "boat",
+      alt: "service",
     },
     features: [""],
     carouselImages: [
       {
         src: "/images/service5/service1.webp",
-        alt: "boat",
+        alt: "service",
       },
     ],
   },

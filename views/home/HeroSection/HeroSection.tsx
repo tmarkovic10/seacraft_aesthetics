@@ -40,6 +40,8 @@ const HeroSection = () => {
           src={"/images/hero.webp"}
           alt="Boat in the water"
           fill
+          priority
+          sizes="100vw"
           style={{ objectFit: "cover" }}
         />
       </div>

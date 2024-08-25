@@ -22,6 +22,7 @@ const Gallery = () => {
               src={image.src}
               alt={image.alt}
               fill
+              sizes="(max-width: 640px) 100vw, 50vw"
               style={{ objectFit: "cover" }}
             />
           </div>

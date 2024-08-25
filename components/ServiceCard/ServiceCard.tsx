@@ -28,6 +28,8 @@ const ServiceCard = ({ id, title, image, fullWidth }: ServiceCardProps) => {
           src={image.src}
           alt={image.alt}
           fill
+          sizes="(max-width: 640px) 100vw, 50vw"
+          priority
           style={{ objectFit: "cover" }}
         />
       </div>
