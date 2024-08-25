@@ -1,9 +1,9 @@
 import React from "react";
 
-import HeroSection from "@/views/AboutUs/HeroSection";
-import SliderSection from "@/views/AboutUs/SliderSection";
+import HeroSection from "@/views/aboutUs/HeroSection";
+import SliderSection from "@/views/aboutUs/SliderSection";
 import Layout from "@/components/Layout";
-import ContactSection from "@/views/Home/ContactSection";
+import ContactSection from "@/views/home/ContactSection";
 
 const AboutUsPage = () => {
   return (

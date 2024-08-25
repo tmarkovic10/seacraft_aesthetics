@@ -1,9 +1,9 @@
 import React from "react";
 
-import AboutSection from "@/views/Home/AboutSection";
-import ContactSection from "@/views/Home/ContactSection";
-import HeroSection from "@/views/Home/HeroSection";
-import ServicesSection from "@/views/Home/ServicesSection";
+import AboutSection from "@/views/home/AboutSection";
+import ContactSection from "@/views/home/ContactSection";
+import HeroSection from "@/views/home/HeroSection";
+import ServicesSection from "@/views/home/ServicesSection";
 
 export default function Home() {
   return (

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import ErrorPage from "@/views/ErrorPage";
+import ErrorPage from "@/views/errorPage";
 
 export const metadata: Metadata = {
   title: "404",
