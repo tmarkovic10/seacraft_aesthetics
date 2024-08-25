@@ -11,7 +11,7 @@ const HeroSection = () => {
     <Container component="section" className={styles.container}>
       <div className={styles.imageContainer}>
         <Image
-          src="/images/service2/item1.jpg"
+          src="/images/service2/item1.webp"
           alt="img"
           fill
           style={{ objectFit: "cover" }}

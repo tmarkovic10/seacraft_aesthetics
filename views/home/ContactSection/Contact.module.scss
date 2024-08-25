@@ -38,6 +38,10 @@
         gap: rem-calc(48);
       }
 
+      @include media(0, "sm") {
+        margin-top: rem-calc(42);
+      }
+
       .contactItem {
         display: flex;
         flex-direction: column;

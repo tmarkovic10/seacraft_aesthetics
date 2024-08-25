@@ -32,6 +32,10 @@
 
     .text {
       margin-top: rem-calc(24);
+
+      @include media(0, "lg") {
+        text-align: center;
+      }
     }
   }
 }

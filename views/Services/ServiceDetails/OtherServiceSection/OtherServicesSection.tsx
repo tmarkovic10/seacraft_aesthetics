@@ -29,7 +29,9 @@ const OtherServicesSection = ({ services }: OtherServicesSectionProps) => {
 
   return (
     <Container component="section" className={styles.container}>
-      <Typography variant="h2">Pogledajte ostale usluge koje nudimo</Typography>
+      <Typography variant="h2" className={styles.title}>
+        Pogledajte ostale usluge koje nudimo
+      </Typography>
       <div className={styles.servicesWrapper}>
         {randomServiceCards.map((item) => (
           <ServiceCard

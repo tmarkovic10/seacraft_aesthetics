@@ -16,7 +16,7 @@ const services: Services[] = [
     description:
       "Za očuvanje optimalne funkcionalnosti i dugotrajne zaštite podvodnog dijela vašeg plovila, nudimo sveobuhvatan set usluga održavanja, uključujući:",
     image: {
-      src: "/images/service1/item1.jpg",
+      src: "/images/service1/item1.webp",
       alt: "boat",
     },
     features: [
@@ -60,7 +60,7 @@ const services: Services[] = [
     description:
       "Za postizanje besprijekornog izgleda i dugotrajne zaštite vašeg plovila, nudimo kompletan spektar usluga poliranja i održavanja vanjskih površina, uključujući:",
     image: {
-      src: "/images/service2/item1.jpg",
+      src: "/images/service2/item1.webp",
       alt: "boat",
     },
     features: [
@@ -105,7 +105,7 @@ const services: Services[] = [
     title: "Održavanje unutarnjih površina",
     description: "",
     image: {
-      src: "/images/service1/item1.jpg",
+      src: "/images/service1/item1.webp",
       alt: "boat",
     },
     features: ["Čišćenje plovila visokotlačnim uređajima"],

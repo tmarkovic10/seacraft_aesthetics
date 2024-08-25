@@ -1,6 +1,10 @@
 .container {
   margin-top: rem-calc(96);
 
+  .title {
+    text-align: center;
+  }
+
   .servicesWrapper {
     margin-top: rem-calc(64);
     display: flex;

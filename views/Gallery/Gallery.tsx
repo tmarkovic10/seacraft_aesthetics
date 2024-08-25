@@ -1,20 +1,19 @@
 import React from "react";
+import Link from "next/link";
+import Image from "next/image";
 
 import Container from "@/components/Container";
 import Typography from "@/components/Typography";
 import igGallery from "@/config/igGallery";
+import Instagram from "@/components/SvgIcons/Instagram";
 
 import styles from "./Gallery.module.scss";
-import Image from "next/image";
-import LinkButton from "@/components/LinkButton";
-import Link from "next/link";
-import Instagram from "@/components/SvgIcons/Instagram";
 
 const Gallery = () => {
   return (
     <Container component="section" className={styles.container}>
       <Typography variant="h1" className={styles.title}>
-        Gallery
+        Galerija
       </Typography>
       <div className={styles.grid}>
         {igGallery.map(({ image }, index) => (

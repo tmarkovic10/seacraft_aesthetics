@@ -20,7 +20,7 @@
 
   .grid {
     max-width: $container-max-width;
-    padding: rem-calc(42 0 42 0);
+    padding: rem-calc(32 0 32 0);
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -28,12 +28,22 @@
     align-items: center;
     color: $dark-blue;
 
+    @include media(0, "sm") {
+      padding: rem-calc(32 0 32 0);
+    }
+
     &.isHome {
       color: $white;
     }
 
     &.scrolled {
       color: $dark-blue;
+    }
+
+    .menuButton {
+      border: none;
+      outline: none;
+      background-color: transparent;
     }
 
     .linksWrapper {
@@ -45,10 +55,6 @@
     .links {
       display: flex;
       gap: rem-calc(32);
-
-      @include media(0, "sm") {
-        display: none;
-      }
 
       .link {
         &.active {
@@ -63,7 +69,6 @@
     .contactLink {
       position: relative;
       overflow: hidden;
-      // width: rem-calc(100);
       text-align: center;
       padding: rem-calc(12 24 12 24);
       border: 1px solid $dark-blue;
