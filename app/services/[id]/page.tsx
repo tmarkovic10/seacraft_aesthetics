@@ -4,6 +4,8 @@ import { notFound } from "next/navigation";
 import DetailsSection from "@/views/Services/ServiceDetails/DetailsSection";
 import Layout from "@/components/Layout";
 import services from "@/config/services";
+import OtherServicesSection from "@/views/Services/ServiceDetails/OtherServiceSection";
+import ContactSection from "@/views/Home/ContactSection";
 
 const ServiceDetailsPage = ({ params }: { params: { id: number } }) => {
   const { id } = params;
@@ -16,6 +18,8 @@ const ServiceDetailsPage = ({ params }: { params: { id: number } }) => {
   return (
     <Layout>
       <DetailsSection service={service} />
+      <OtherServicesSection services={services} />
+      <ContactSection />
     </Layout>
   );
 };

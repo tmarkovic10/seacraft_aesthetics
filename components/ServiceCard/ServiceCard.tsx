@@ -1,6 +1,8 @@
 import React from "react";
 import Image from "next/image";
 
+import cx from "clsx";
+
 import LinkButton from "@/components/LinkButton";
 import Typography from "@/components/Typography";
 import { Image as ImageType } from "@/types/image";
@@ -11,11 +13,16 @@ interface ServiceCardProps {
   id: number;
   title: string;
   image: ImageType;
+  fullWidth?: boolean;
 }
 
-const ServiceCard = ({ id, title, image }: ServiceCardProps) => {
+const ServiceCard = ({ id, title, image, fullWidth }: ServiceCardProps) => {
   return (
-    <div className={styles.container}>
+    <div
+      className={cx(styles.container, {
+        [styles.fullWidthContainer]: fullWidth,
+      })}
+    >
       <div className={styles.imageContainer}>
         <Image
           src={image.src}
@@ -25,12 +32,12 @@ const ServiceCard = ({ id, title, image }: ServiceCardProps) => {
         />
       </div>
       <div className={styles.textContainer}>
-        <Typography variant="subtitle1" component="h3">
+        <Typography variant="subtitle1" component="h3" className={styles.title}>
           {title}
         </Typography>
       </div>
       <div className={styles.overlay}>
-        <LinkButton href={`services/${id}`} text="Learn more" />
+        <LinkButton href={`/services/${id}`} text="Learn more" />
       </div>
     </div>
   );

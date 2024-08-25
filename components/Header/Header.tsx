@@ -16,7 +16,6 @@ import styles from "./Header.module.scss";
 
 const Header = () => {
   const [hasScrolled, setHasScrolled] = useState(false);
-  const [activeHref, setActiveHref] = useState<string>("");
   const pathname = usePathname();
   const lenis = useLenis();
   const isHome = pathname == "/";
@@ -31,9 +30,9 @@ const Header = () => {
   const handleScroll = () => {
     const currentScrollPos = window.scrollY;
 
-    if (currentScrollPos > 100 && !hasScrolled) {
+    if (currentScrollPos > 10 && !hasScrolled) {
       setHasScrolled(true);
-    } else if (currentScrollPos <= 100 && hasScrolled) {
+    } else if (currentScrollPos <= 10 && hasScrolled) {
       setHasScrolled(false);
     }
   };

@@ -1,5 +1,8 @@
 .container {
   position: relative;
+  display: flex;
+  align-items: center;
+  gap: rem-calc(8);
   border: 1px solid $white;
   padding: rem-calc(12 24 12 24);
   overflow: hidden;

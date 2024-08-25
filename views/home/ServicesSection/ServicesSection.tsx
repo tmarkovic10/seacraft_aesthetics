@@ -11,7 +11,7 @@ import ArrowRight from "@/components/SvgIcons/ArrowRight";
 
 const ServicesSection = () => {
   return (
-    <Container component="section" className={styles.container}>
+    <Container component="section" id="services" className={styles.container}>
       <div className={styles.wrapper}>
         <Typography variant="h1" component="h2" className={styles.title}>
           Što sve nudimo

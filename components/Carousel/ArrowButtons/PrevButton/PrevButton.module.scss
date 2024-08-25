@@ -11,14 +11,20 @@
   padding: 0;
   margin: 0;
   box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);
-  width: 3.6rem;
-  height: 3.6rem;
+  width: rem-calc(48);
+  height: rem-calc(48);
   z-index: 1;
   border-radius: 50%;
   color: var(--text-body);
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: $white;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #ededed;
+  }
 
   &:disabled {
     color: var(--detail-high-contrast);

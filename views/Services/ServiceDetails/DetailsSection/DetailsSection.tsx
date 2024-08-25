@@ -6,9 +6,9 @@ import { Services } from "@/config/services";
 import Container from "@/components/Container";
 import Typography from "@/components/Typography";
 import Carousel from "@/components/Carousel";
+import Feature from "@/components/SvgIcons/Feature";
 
 import styles from "./DetailsSection.module.scss";
-import Feature from "@/components/SvgIcons/Feature";
 
 const OPTIONS: EmblaOptionsType = {};
 
@@ -30,7 +30,7 @@ const DetailsSection = ({ service }: DetailsSectionProps) => {
           <ul className={styles.services}>
             {features.map((item, index) => (
               <li key={index} className={styles.serviceItem}>
-                <Feature />
+                <Feature style={{ flexShrink: 0 }} />
                 <Typography variant="body2">{item}</Typography>
               </li>
             ))}

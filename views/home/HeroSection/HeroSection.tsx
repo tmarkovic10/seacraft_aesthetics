@@ -1,13 +1,34 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 
-import Container from "@/components/Container";
+import { useLenis } from "lenis/react";
 
-import styles from "./HeroSection.module.scss";
+import Container from "@/components/Container";
 import Typography from "@/components/Typography";
 import LinkButton from "@/components/LinkButton";
 
+import styles from "./HeroSection.module.scss";
+
 const HeroSection = () => {
+  const lenis = useLenis();
+  const sectionId = "services";
+
+  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const { hash } = e.currentTarget;
+
+    if (hash) {
+      const id = hash.substring(1);
+      const section = document.getElementById(id);
+
+      if (section && lenis) {
+        lenis.scrollTo(section);
+      }
+    }
+  };
+
   return (
     <Container
       component="section"
@@ -29,7 +50,11 @@ const HeroSection = () => {
         <Typography variant="body1" className={styles.text}>
           Osvježite svoj brod do savršenstva
         </Typography>
-        <LinkButton href="#" text="Saznaj više" />
+        <LinkButton
+          href={`/#${sectionId}`}
+          scrollHandler={scrollToSection}
+          text="Saznaj više"
+        />
       </div>
     </Container>
   );

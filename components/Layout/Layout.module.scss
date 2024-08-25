@@ -2,8 +2,13 @@
   padding-top: rem-calc(136);
   background-color: $primary;
 
+  @include media(0, "md") {
+    padding-top: rem-calc(86);
+  }
+
   .wrapper {
     padding: $padding;
+    padding-bottom: 0;
     max-width: $container-max-width;
     margin: 0 auto;
     color: $dark-blue;

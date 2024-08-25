@@ -7,7 +7,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: rem-calc(24);
-    margin-top: rem-calc(96);
+    margin-top: rem-calc(120);
 
     @include media(0, "sm") {
       grid-template-columns: repeat(1, 1fr);
