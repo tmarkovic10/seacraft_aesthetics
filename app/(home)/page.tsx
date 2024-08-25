@@ -1,9 +1,10 @@
 import React from "react";
+import dynamic from "next/dynamic";
 
-import AboutSection from "@/views/home/AboutSection";
-import ContactSection from "@/views/home/ContactSection";
-import HeroSection from "@/views/home/HeroSection";
-import ServicesSection from "@/views/home/ServicesSection";
+const HeroSection = dynamic(() => import("@/views/home/HeroSection"));
+const AboutSection = dynamic(() => import("@/views/home/AboutSection"));
+const ServicesSection = dynamic(() => import("@/views/home/ServicesSection"));
+const ContactSection = dynamic(() => import("@/views/home/ContactSection"));
 
 export default function Home() {
   return (
