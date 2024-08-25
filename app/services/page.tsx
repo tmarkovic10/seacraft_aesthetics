@@ -1,7 +1,7 @@
 import React from "react";
 
 import Layout from "@/components/Layout";
-import ServicesSection from "@/views/Services/ServicesSection/ServicesSection";
+import ServicesSection from "@/views/services/ServicesSection/ServicesSection";
 import ContactSection from "@/views/home/ContactSection";
 
 const ServicesPage = () => {
