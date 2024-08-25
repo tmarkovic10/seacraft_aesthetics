@@ -1,10 +1,10 @@
 import React from "react";
 import { notFound } from "next/navigation";
 
-import DetailsSection from "@/views/services/ServiceDetails/DetailsSection";
+import DetailsSection from "@/views/Services/ServiceDetails/DetailsSection";
 import Layout from "@/components/Layout";
 import services from "@/config/services";
-import OtherServicesSection from "@/views/services/ServiceDetails/OtherServiceSection";
+import OtherServicesSection from "@/views/Services/ServiceDetails/OtherServiceSection";
 import ContactSection from "@/views/home/ContactSection";
 
 const ServiceDetailsPage = ({ params }: { params: { id: number } }) => {
