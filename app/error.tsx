@@ -2,7 +2,7 @@
 
 import type { Metadata } from "next";
 
-import ErrorPage from "@/views/errorPage";
+import ErrorPage from "@/views/error-page";
 
 export const metadata: Metadata = {
   title: "500",

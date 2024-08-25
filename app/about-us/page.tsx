@@ -1,7 +1,7 @@
 import React from "react";
 
-import HeroSection from "@/views/aboutUs/HeroSection";
-import SliderSection from "@/views/aboutUs/SliderSection";
+import HeroSection from "@/views/about-us/HeroSection";
+import SliderSection from "@/views/about-us/SliderSection";
 import Layout from "@/components/Layout";
 import ContactSection from "@/views/home/ContactSection";
 
