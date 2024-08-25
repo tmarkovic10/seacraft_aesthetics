@@ -13,6 +13,9 @@ const ServicesSection = () => {
       <Typography variant="h1" className={styles.title}>
         Usluge
       </Typography>
+      <Typography variant="h5" component="h2" className={styles.subtitle}>
+        Usluge vršimo na vašoj adresi!
+      </Typography>
       <div className={styles.servicesWrapper}>
         {services.map((item) => (
           <ServiceCard

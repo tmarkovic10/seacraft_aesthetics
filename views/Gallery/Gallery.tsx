@@ -37,7 +37,7 @@ const Gallery = () => {
           target="_blank"
           className={styles.igLink}
         >
-          <Typography variant="body2">Instagram</Typography>
+          <Typography variant="body1">Instagram</Typography>
           <Instagram />
         </Link>
       </div>

@@ -103,9 +103,10 @@ const services: Services[] = [
   {
     id: 3,
     title: "Održavanje unutarnjih površina",
-    description: "",
+    description:
+      "Za postizanje besprijekornog izgleda i dugotrajne zaštite unutarnjih prostora vašeg broda, nudimo sveobuhvatan spektar usluga čišćenja i održavanja unutarnjih površina",
     image: {
-      src: "/images/service1/item1.webp",
+      src: "/images/service3/service5.webp",
       alt: "service",
     },
     features: ["Čišćenje plovila visokotlačnim uređajima"],

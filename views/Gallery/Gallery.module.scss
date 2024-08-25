@@ -46,11 +46,9 @@
     .igLink {
       display: flex;
       align-items: center;
-      @include underline($color: transparent);
-
-      &:hover {
-        @include underline($color: $dark-blue);
-      }
+      border: 1px solid $dark-blue;
+      padding: rem-calc(12);
+      background-color: $white;
     }
   }
 }

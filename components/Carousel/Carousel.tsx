@@ -34,6 +34,8 @@ const Carousel: React.FC<PropType> = (props) => {
     onNextButtonClick,
   } = usePrevNextButtons(emblaApi);
 
+  const single = slides.length > 2;
+
   return (
     <div className={styles.embla}>
       <div className={styles.viewport} ref={emblaRef}>
@@ -50,30 +52,32 @@ const Carousel: React.FC<PropType> = (props) => {
           ))}
         </div>
 
-        <div className={styles.controls}>
-          <div className={styles.buttons}>
-            <PrevButton
-              onClick={onPrevButtonClick}
-              disabled={prevBtnDisabled}
-            />
-            <NextButton
-              onClick={onNextButtonClick}
-              disabled={nextBtnDisabled}
-            />
-          </div>
-
-          <div className={styles.dots}>
-            {scrollSnaps.map((_, index) => (
-              <DotButton
-                key={index}
-                onClick={() => onDotButtonClick(index)}
-                className={cx(styles.dot, {
-                  [styles.dotSelected]: index === selectedIndex,
-                })}
+        {single && (
+          <div className={styles.controls}>
+            <div className={styles.buttons}>
+              <PrevButton
+                onClick={onPrevButtonClick}
+                disabled={prevBtnDisabled}
               />
-            ))}
+              <NextButton
+                onClick={onNextButtonClick}
+                disabled={nextBtnDisabled}
+              />
+            </div>
+
+            <div className={styles.dots}>
+              {scrollSnaps.map((_, index) => (
+                <DotButton
+                  key={index}
+                  onClick={() => onDotButtonClick(index)}
+                  className={cx(styles.dot, {
+                    [styles.dotSelected]: index === selectedIndex,
+                  })}
+                />
+              ))}
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );
