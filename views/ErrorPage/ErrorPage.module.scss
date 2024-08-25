@@ -1,0 +1,19 @@
+.container {
+  height: 100vh;
+  background-color: $primary;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: rem-calc(36);
+  color: $dark-blue;
+
+  .backBtn {
+    border: 1px solid $dark-blue;
+    color: $dark-blue;
+
+    &:hover {
+      color: $white;
+    }
+  }
+}
