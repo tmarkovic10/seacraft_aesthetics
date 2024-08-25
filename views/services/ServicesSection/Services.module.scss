@@ -1,0 +1,33 @@
+.container {
+  .title {
+    text-align: center;
+  }
+
+  .servicesWrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem-calc(24);
+    margin-top: rem-calc(96);
+
+    @include media(0, "sm") {
+      margin-top: rem-calc(42);
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .contactCard {
+      width: 100%;
+      height: rem-calc(390);
+      background-color: $dark-blue;
+      border-radius: rem-calc(8);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: $white;
+
+      @include media(0, "sm") {
+        display: none;
+      }
+    }
+  }
+}
