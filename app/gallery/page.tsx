@@ -1,7 +1,7 @@
 import React from "react";
 
 import Layout from "@/components/Layout";
-import Gallery from "@/views/gallery";
+import Gallery from "@/views/Gallery";
 import ContactSection from "@/views/home/ContactSection";
 
 const GalleryPage = () => {
