@@ -37,7 +37,7 @@ const HeroSection = () => {
     >
       <div className={styles.imageContainer}>
         <Image
-          src={"/images/hero.jpg"}
+          src={"/images/hero.webp"}
           alt="Boat in the water"
           fill
           style={{ objectFit: "cover" }}
