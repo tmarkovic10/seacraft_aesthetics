@@ -70,6 +70,7 @@ const Header = () => {
       component="header"
       className={cx(styles.container, {
         [styles.scrolled]: hasScrolled,
+        [styles.homeBg]: isHome,
       })}
     >
       <div

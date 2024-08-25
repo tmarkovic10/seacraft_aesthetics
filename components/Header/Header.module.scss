@@ -3,10 +3,14 @@
   position: fixed;
   z-index: 1000;
   transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  background-color: transparent;
+  background-color: $primary;
 
   @include media(0, "md") {
     padding: rem-calc(0 24 0 24);
+  }
+
+  &.homeBg {
+    background-color: transparent;
   }
 
   &.hidden {
