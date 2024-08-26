@@ -21,7 +21,7 @@ const AboutSection = () => {
       <Typography variant="subtitle1" className={styles.description}>
         Mi smo mali mobilni tim koji dolazi na vašu adresu kako bi spremili vaše
         plovilo za sezonu ili suhi vez. Time vas oslobađamo potrebnih radnji
-        kako bi ste vaše slobdno vrijeme proveli uživajući u vašem plovilu.
+        kako bi ste vaše slobodno vrijeme proveli uživajući u vašem plovilu.
       </Typography>
     </Container>
   );

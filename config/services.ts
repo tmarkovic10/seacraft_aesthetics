@@ -104,19 +104,28 @@ const services: Services[] = [
     id: 3,
     title: "Održavanje unutarnjih površina",
     description:
-      "Za postizanje besprijekornog izgleda i dugotrajne zaštite unutarnjih prostora vašeg broda, nudimo sveobuhvatan spektar usluga čišćenja i održavanja unutarnjih površina",
+      "Za postizanje besprijekornog izgleda i dugotrajne zaštite unutarnjih prostora vašeg broda, nudimo sveobuhvatan spektar usluga čišćenja i održavanja unutarnjih površina bez obzira na materijal:",
     image: {
-      src: "/images/service3/service5.webp",
+      src: "/images/service3/service2.webp",
       alt: "service",
     },
-    features: ["Čišćenje plovila visokotlačnim uređajima"],
+    features: [
+      "Plastika",
+      "Drvo",
+      "Metal",
+      "Staklo",
+      "Pleksiglas",
+      "Tkanina",
+      "Prava koža",
+      "Umjetna koža",
+    ],
     carouselImages: [
       {
-        src: "/images/service3/service2.webp",
+        src: "/images/service3/service1.webp",
         alt: "service",
       },
       {
-        src: "/images/service3/service1.webp",
+        src: "/images/service3/service2.webp",
         alt: "service",
       },
       {
@@ -131,6 +140,10 @@ const services: Services[] = [
         src: "/images/service3/service5.webp",
         alt: "service",
       },
+      {
+        src: "/images/service3/service6.webp",
+        alt: "service",
+      },
     ],
   },
   {
@@ -143,11 +156,13 @@ const services: Services[] = [
       alt: "service",
     },
     features: [
-      "Zaštita od vremenskih uvjeta",
-      "Čvrsto prianjanje",
-      "Jednostavna primjena",
-      "Dugotrajna zaštita",
-      "Održavanje čistoće",
+      "Dokazano najbolja zaštita od vremenskih nepogoda (kiselih kiša) i onečišćenja.",
+      "Otporna na udare jakih jetrova i preko 150 km/sat",
+      "Patentirana matrična konstrukcija onemogućuje paranje shrink wrap folije",
+      "Zaštita od UV sunčanih zraka koje štete gelcoat-u",
+      "Zaštita od agresivnog utjecaja morske vode",
+      "Antikorozivna zaštita",
+      "Zaštita od manjih oštećenja",
     ],
     carouselImages: [
       {
@@ -159,15 +174,46 @@ const services: Services[] = [
   {
     id: 5,
     title: "Usluge skipera",
-    description: "",
+    description:
+      "Za osiguranje sigurnog i ugodnog iskustva plovidbe vašeg plovila, nudimo kompletan spektar usluga skippera, uključujući:",
     image: {
       src: "/images/service5/service1.webp",
       alt: "service",
     },
-    features: [""],
+    features: [
+      "Navigacija i upravljanje plovilom",
+      "Planiranje rute i savjetovanje o destinacijama",
+      "Organizacija dnevnih aktivnosti na moru",
+      "Pomoć pri ukrcaju i iskrcaju",
+      "Vođenje brige o sigurnosti posade i putnika",
+    ],
     carouselImages: [
       {
-        src: "/images/service5/service1.webp",
+        src: "/images/service5/service2.webp",
+        alt: "service",
+      },
+      {
+        src: "/images/service5/service3.webp",
+        alt: "service",
+      },
+      {
+        src: "/images/service5/service4.webp",
+        alt: "service",
+      },
+      {
+        src: "/images/service5/service5.webp",
+        alt: "service",
+      },
+      {
+        src: "/images/service5/service6.webp",
+        alt: "service",
+      },
+      {
+        src: "/images/service5/service7.webp",
+        alt: "service",
+      },
+      {
+        src: "/images/service5/service8.webp",
         alt: "service",
       },
     ],
