@@ -5,6 +5,7 @@ import Container from "@/components/Container";
 import Typography from "@/components/Typography";
 
 import styles from "./AboutSection.module.scss";
+import LocaleSwitcher from "@/components/LocaleSwitcher";
 
 const AboutSection = () => {
   return (
@@ -23,6 +24,7 @@ const AboutSection = () => {
         plovilo za sezonu ili suhi vez. Time vas oslobađamo potrebnih radnji
         kako bi ste vaše slobodno vrijeme proveli uživajući u vašem plovilu.
       </Typography>
+      <LocaleSwitcher />
     </Container>
   );
 };

@@ -1,0 +1,10 @@
+{
+  "HomePage": {
+    "subtitle": "Hrvatska"
+  },
+  "LocaleSwitcher": {
+    "hr": "Croatian",
+    "en": "English",
+    "label": "Language"
+  }
+}

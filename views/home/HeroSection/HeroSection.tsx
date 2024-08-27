@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 import { useLenis } from "lenis/react";
 
@@ -12,6 +13,7 @@ import LinkButton from "@/components/LinkButton";
 import styles from "./HeroSection.module.scss";
 
 const HeroSection = () => {
+  const t = useTranslations("HomePage");
   const lenis = useLenis();
   const sectionId = "services";
 
@@ -50,7 +52,7 @@ const HeroSection = () => {
           Seacraft Aesthetics
         </Typography>
         <Typography variant="body1" className={styles.text}>
-          Osvježite svoj brod do savršenstva
+          {t("subtitle")}
         </Typography>
         <LinkButton
           href={`/#${sectionId}`}
