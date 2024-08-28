@@ -1,7 +1,8 @@
 "use client";
 
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState, ReactNode } from "react";
 import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 
 import { useLenis } from "lenis/react";
@@ -10,19 +11,20 @@ import cx from "clsx";
 import Container from "@/components/Container";
 import Typography from "@/components//Typography";
 import Logo from "@/components/SvgIcons/Logo";
-import navigationLinks from "@/config/navigationLinks";
+import navigationLinks, { NavigationLink } from "@/config/navigationLinks";
 import useIsMobile from "@/utils/hooks/useIsMobile";
 import MobileNav from "@/components/MobileNav";
 import HamburgerMenu from "@/components/SvgIcons/HamburgerMenu";
 
 import styles from "./Header.module.scss";
 
-const Header = () => {
+const Header = ({ children }: { children: ReactNode }) => {
   const [hasScrolled, setHasScrolled] = useState(false);
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
   const pathname = usePathname();
   const lenis = useLenis();
   const isMobile = useIsMobile();
+  const t = useTranslations("HomePage");
   const isHome = pathname == "/";
 
   const sectionId = "contact";
@@ -88,17 +90,21 @@ const Header = () => {
           />
         </Link>
         {isMobile ? (
-          <button onClick={toggleMobileNav} className={styles.menuButton}>
-            <HamburgerMenu
-              strokeColor={
-                isHome ? (hasScrolled ? "#023449" : "#fff") : "#023449"
-              }
-            />
-          </button>
+          <div className={styles.gridMobile}>
+            {children}
+            <button onClick={toggleMobileNav} className={styles.menuButton}>
+              <HamburgerMenu
+                strokeColor={
+                  isHome ? (hasScrolled ? "#023449" : "#fff") : "#023449"
+                }
+              />
+            </button>
+          </div>
         ) : (
           <nav className={styles.linksWrapper}>
+            {children}
             <ul className={styles.links}>
-              {navigationLinks.map((item) => (
+              {t.raw("navigationLinks").map((item: NavigationLink) => (
                 <li key={item.text}>
                   <Link
                     href={item.href}
@@ -119,7 +125,7 @@ const Header = () => {
                 [styles.isHome]: isHome,
               })}
             >
-              <Typography variant="body2">Kontakt</Typography>
+              <Typography variant="body2">{t("contactBtn")}</Typography>
             </Link>
           </nav>
         )}
@@ -128,7 +134,6 @@ const Header = () => {
           <MobileNav
             isOpen={isMobileNavOpen}
             toggleMobileNav={toggleMobileNav}
-            navigationLinks={navigationLinks}
           />
         )}
       </div>

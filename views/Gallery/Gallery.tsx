@@ -8,12 +8,14 @@ import igGallery from "@/config/igGallery";
 import Instagram from "@/components/SvgIcons/Instagram";
 
 import styles from "./Gallery.module.scss";
+import { useTranslations } from "next-intl";
 
 const Gallery = () => {
+  const t = useTranslations("GalleryPage");
   return (
     <Container component="section" className={styles.container}>
       <Typography variant="h1" className={styles.title}>
-        Galerija
+        {t("title")}
       </Typography>
       <div className={styles.grid}>
         {igGallery.map(({ image }, index) => (
@@ -29,9 +31,7 @@ const Gallery = () => {
         ))}
       </div>
       <div className={styles.socialWrapper}>
-        <Typography variant="body1">
-          Pogledajte više na našem Instagram profilu
-        </Typography>
+        <Typography variant="body1">{t("igText")}</Typography>
         <Link
           href="https://www.instagram.com/seacraft.aesthetics?igsh=MTVxdnBwam40M3p1Yw=="
           target="_blank"

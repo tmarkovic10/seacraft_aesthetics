@@ -1,6 +1,7 @@
 import React from "react";
+import { useTranslations } from "next-intl";
 
-import services from "@/config/services";
+import { Services } from "@/config/services";
 import Container from "@/components/Container";
 import Typography from "@/components/Typography";
 import ServiceCard from "@/components/ServiceCard";
@@ -8,26 +9,28 @@ import ServiceCard from "@/components/ServiceCard";
 import styles from "./Services.module.scss";
 
 const ServicesSection = () => {
+  const t = useTranslations("ServicesPage");
+  const t2 = useTranslations("HomePage");
   return (
     <Container component="section" className={styles.container}>
       <Typography variant="h1" className={styles.title}>
-        Usluge
+        {t("title")}
       </Typography>
       <Typography variant="h5" component="h2" className={styles.subtitle}>
-        Usluge vršimo na vašoj adresi!
+        {t("subtitle")}
       </Typography>
       <div className={styles.servicesWrapper}>
-        {services.map((item) => (
+        {t2.raw("services").map((item: Services) => (
           <ServiceCard
-            key={item.title}
             id={item.id}
+            key={item.title}
             title={item.title}
             image={item.image}
           />
         ))}
         <div className={styles.contactCard}>
-          <Typography variant="body1">Imate pitanje?</Typography>
-          <Typography variant="body1">Kontaktirajte nas</Typography>
+          <Typography variant="body1"> {t("questionText")}</Typography>
+          <Typography variant="body1"> {t("contactText")}</Typography>
         </div>
       </div>
     </Container>

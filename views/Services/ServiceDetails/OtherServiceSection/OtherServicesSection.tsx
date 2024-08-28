@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
+import { useTranslations, useLocale } from "next-intl";
 
 import { Services } from "@/config/services";
 import Container from "@/components/Container";
@@ -17,23 +18,27 @@ interface OtherServicesSectionProps {
 
 const OtherServicesSection = ({ services }: OtherServicesSectionProps) => {
   const [randomServiceCards, setRandomServiceCards] = useState<Services[]>([]);
+  const locale = useLocale();
   const pathname = usePathname();
+  const t = useTranslations("ServiceDetailsPage");
+  const t2 = useTranslations("HomePage");
   const id = pathname.split("/").pop();
+  const serviceItems = t2.raw("services").map((item: Services) => item);
 
   useEffect(() => {
     if (id) {
-      const selectedItems = getRandomItems(services, Number(id));
+      const selectedItems = getRandomItems(serviceItems, Number(id));
       setRandomServiceCards(selectedItems);
     }
-  }, [id]);
+  }, [id, locale]);
 
   return (
     <Container component="section" className={styles.container}>
       <Typography variant="h2" className={styles.title}>
-        Pogledajte ostale usluge koje nudimo
+        {t("title")}
       </Typography>
       <div className={styles.servicesWrapper}>
-        {randomServiceCards.map((item) => (
+        {randomServiceCards.map((item: Services) => (
           <ServiceCard
             id={item.id}
             key={item.title}

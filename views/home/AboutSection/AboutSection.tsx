@@ -1,13 +1,14 @@
 import React from "react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 import Container from "@/components/Container";
 import Typography from "@/components/Typography";
 
 import styles from "./AboutSection.module.scss";
-import LocaleSwitcher from "@/components/LocaleSwitcher";
 
 const AboutSection = () => {
+  const t = useTranslations("HomePage");
   return (
     <Container component="section" className={styles.container}>
       <div className={styles.imageContainer}>
@@ -20,11 +21,8 @@ const AboutSection = () => {
         />
       </div>
       <Typography variant="subtitle1" className={styles.description}>
-        Mi smo mali mobilni tim koji dolazi na vašu adresu kako bi spremili vaše
-        plovilo za sezonu ili suhi vez. Time vas oslobađamo potrebnih radnji
-        kako bi ste vaše slobodno vrijeme proveli uživajući u vašem plovilu.
+        {t("aboutIntro")}
       </Typography>
-      <LocaleSwitcher />
     </Container>
   );
 };

@@ -1,6 +1,244 @@
 {
   "HomePage": {
-    "subtitle": "Engleska"
+    "subtitle": "Refresh your boat to perfection",
+    "learnMore": "Learn More",
+    "aboutIntro": "We are a small mobile team that comes to your address to store your vessel for the season or dry berth. This frees you from the necessary actions so that you can spend your free time enjoying your vessel.",
+    "serviceSectionTitle": "What we offer",
+    "services": [
+      {
+        "id": 1,
+        "title": "Underwater Hull Maintenance",
+        "description": "To maintain optimal functionality and long-term protection of your vessel's underwater hull, we offer a comprehensive set of maintenance services, including:",
+        "image": {
+          "src": "/images/service1/item1.webp",
+          "alt": "service"
+        },
+        "features": [
+          "Freshwater rinsing under high pressure",
+          "Sanding the hull to remove imperfections",
+          "Chemical cleaning of surfaces",
+          "Sanding metal parts to remove old protective coating",
+          "Replacing zinc anodes",
+          "Preparation and application of anti-fouling coating"
+        ],
+        "carouselImages": [
+          {
+            "src": "/images/service1/service2.webp",
+            "alt": "service"
+          },
+          {
+            "src": "/images/service1/service1.webp",
+            "alt": "service"
+          },
+          {
+            "src": "/images/service1/service3.webp",
+            "alt": "service"
+          },
+          {
+            "src": "/images/service1/service4.webp",
+            "alt": "service"
+          },
+          {
+            "src": "/images/service1/service5.webp",
+            "alt": "service"
+          },
+          {
+            "src": "/images/service1/service6.webp",
+            "alt": "service"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Exterior Surface Maintenance",
+        "description": "To achieve a flawless appearance and long-term protection of your vessel, we offer a full range of polishing and maintenance services for exterior surfaces, including:",
+        "image": {
+          "src": "/images/service2/item1.webp",
+          "alt": "service"
+        },
+        "features": [
+          "Cleaning the vessel with high-pressure equipment",
+          "Removing oxidation by sanding for severe gelcoat damage",
+          "Washing with premium detergents",
+          "Surface decontamination",
+          "Eliminating water stains and limescale",
+          "Removing corrosion",
+          "Removing old stickers",
+          "Restoring anti-slip surfaces",
+          "Maintaining teak (cleaning, sanding, protecting)",
+          "Deep cleaning of covers and cushions with chemicals",
+          "Polishing and protecting exterior surfaces",
+          "Polishing and protecting stainless steel parts"
+        ],
+        "carouselImages": [
+          {
+            "src": "/images/service2/service2.webp",
+            "alt": "service"
+          },
+          {
+            "src": "/images/service2/service3.webp",
+            "alt": "service"
+          },
+          {
+            "src": "/images/service2/service4.webp",
+            "alt": "service"
+          },
+          {
+            "src": "/images/service2/service1.webp",
+            "alt": "service"
+          },
+          {
+            "src": "/images/service2/service5.webp",
+            "alt": "service"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Interior Surface Maintenance",
+        "description": "To achieve a flawless appearance and long-term protection of your vessel's interior spaces, we offer a comprehensive range of cleaning and maintenance services for all materials:",
+        "image": {
+          "src": "/images/service3/service2.webp",
+          "alt": "service"
+        },
+        "features": [
+          "Plastic",
+          "Wood",
+          "Metal",
+          "Glass",
+          "Plexiglass",
+          "Fabric",
+          "Genuine leather",
+          "Synthetic leather"
+        ],
+        "carouselImages": [
+          {
+            "src": "/images/service3/service1.webp",
+            "alt": "service"
+          },
+          {
+            "src": "/images/service3/service2.webp",
+            "alt": "service"
+          },
+          {
+            "src": "/images/service3/service3.webp",
+            "alt": "service"
+          },
+          {
+            "src": "/images/service3/service4.webp",
+            "alt": "service"
+          },
+          {
+            "src": "/images/service3/service5.webp",
+            "alt": "service"
+          },
+          {
+            "src": "/images/service3/service6.webp",
+            "alt": "service"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Heat-shrinkable films",
+        "description": "For maximum protection and preservation of your vessel during storage and transport, we offer a complete shrink wrap film application service.",
+        "image": {
+          "src": "/images/service4/service1.webp",
+          "alt": "service"
+        },
+        "features": [
+          "Proven best protection against weather (acid rain) and pollution.",
+          "Resistant to impacts of strong jets and speeds over 150 km/h",
+          "Patented matrix construction prevents shrink wrap film from tearing",
+          "Protection from UV rays that damage gelcoat",
+          "Protection from aggressive effects of seawater",
+          "Anti-corrosion protection",
+          "Protection against minor damage"
+        ],
+        "carouselImages": [
+          {
+            "src": "/images/service4/service1.webp",
+            "alt": "service"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "Skipper Services",
+        "description": "To ensure a safe and pleasant sailing experience for your vessel, we offer a full range of skipper services, including:",
+        "image": {
+          "src": "/images/service5/service1.webp",
+          "alt": "service"
+        },
+        "features": [
+          "Navigation and vessel management",
+          "Route planning and destination advice",
+          "Organization of daily activities at sea",
+          "Assistance with boarding and disembarking",
+          "Ensuring the safety of crew and passengers"
+        ],
+        "carouselImages": [
+          {
+            "src": "/images/service5/service2.webp",
+            "alt": "service"
+          },
+          {
+            "src": "/images/service5/service3.webp",
+            "alt": "service"
+          },
+          {
+            "src": "/images/service5/service4.webp",
+            "alt": "service"
+          },
+          {
+            "src": "/images/service5/service5.webp",
+            "alt": "service"
+          },
+          {
+            "src": "/images/service5/service6.webp",
+            "alt": "service"
+          },
+          {
+            "src": "/images/service5/service7.webp",
+            "alt": "service"
+          },
+          {
+            "src": "/images/service5/service8.webp",
+            "alt": "service"
+          }
+        ]
+      }
+    ],
+    "seeMoreLink": "See more",
+    "contactTitle": "Contact us",
+    "contactSubtitle": "For any questions or information, feel free to contact us by e-mail or phone",
+    "navigationLinks": [
+      { "text": "About Us", "href": "/about-us" },
+      { "text": "Services", "href": "/services" },
+      { "text": "Gallery", "href": "/gallery" }
+    ],
+    "contactBtn": "Contact"
+  },
+  "AboutUsPage": {
+    "title": "About Us",
+    "description": "Seacraft Aesthetics is a small mobile team offering professional polishing of ships and arrangement of interior and exterior surfaces of vessels. Our passion for shipping and commitment to quality allows us to make your let's return the ship to a perfect condition. We specialize in polishing ships and interior and exterior decoration, using the most modern technologies and materials. Whether it's a detailed cleaning, renovation shine, or complete interior reconstruction, our expert team ensures top service and satisfaction for our clients. Trust me as your vessel and enjoy the flawless beauty and functionality we provide.",
+    "sliderTitle": "From neglected to brilliant",
+    "before": "Before",
+    "after": "After",
+    "seeMore": "See more"
+  },
+  "ServicesPage": {
+    "title": "Services",
+    "subtitle": "We provide services at your address!",
+    "questionText": "Do you have a quesiton?",
+    "contactText": "Contact us"
+  },
+  "ServiceDetailsPage": {
+    "title": "See other services we offer"
+  },
+  "GalleryPage": {
+    "title": "Gallery",
+    "igText": "See more on our Instagram profile"
   },
   "LocaleSwitcher": {
     "hr": "Croatian",

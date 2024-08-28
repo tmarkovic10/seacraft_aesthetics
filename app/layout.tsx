@@ -8,6 +8,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 import "@/styles/index.scss";
+import LocaleSwitcher from "@/components/LocaleSwitcher";
 
 export const metadata: Metadata = {
   title: {
@@ -56,13 +57,15 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <body>
-        <Header />
         <Providers>
           <NextIntlClientProvider messages={messages}>
+            <Header>
+              <LocaleSwitcher />
+            </Header>
             {children}
           </NextIntlClientProvider>
+          <Footer />
         </Providers>
-        <Footer />
       </body>
     </html>
   );

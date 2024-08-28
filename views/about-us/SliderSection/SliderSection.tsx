@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 import {
   ReactCompareSlider,
@@ -13,15 +14,16 @@ import ArrowRight from "@/components/SvgIcons/ArrowRight";
 import styles from "./SliderSection.module.scss";
 
 const SliderSection = () => {
+  const t = useTranslations("AboutUsPage");
   return (
     <Container component="section" className={styles.container}>
       <Typography variant="h3" component="h2" className={styles.title}>
-        Od zapuštenog do blistavog
+        {t("sliderTitle")}
       </Typography>
       <div className={styles.compareSlider}>
         <div className={styles.text}>
-          <Typography variant="body1">Prije</Typography>
-          <Typography variant="body1">Poslije</Typography>
+          <Typography variant="body1">{t("before")}</Typography>
+          <Typography variant="body1">{t("after")}</Typography>
         </div>
         <ReactCompareSlider
           boundsPadding={0}
@@ -47,7 +49,7 @@ const SliderSection = () => {
         />
       </div>
       <Link href="/gallery" className={styles.seeMore}>
-        <Typography variant="body2">Pogledaj više</Typography>
+        <Typography variant="body2"> {t("seeMore")}</Typography>
         <ArrowRight />
       </Link>
     </Container>

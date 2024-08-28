@@ -44,6 +44,12 @@
       color: $dark-blue;
     }
 
+    .gridMobile {
+      display: flex;
+      align-items: center;
+      gap: rem-calc(24);
+    }
+
     .menuButton {
       border: none;
       outline: none;

@@ -1,14 +1,16 @@
 import React from "react";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 import Container from "@/components/Container";
 
 import styles from "./Footer.module.scss";
-import navigationLinks from "@/config/navigationLinks";
+import { NavigationLink } from "@/config/navigationLinks";
 import Typography from "@/components/Typography";
 import Logo from "@/components/SvgIcons/Logo";
 
 const Footer = () => {
+  const t = useTranslations("HomePage");
   return (
     <Container component="footer" className={styles.container}>
       <div className={styles.wrapper}>
@@ -17,12 +19,10 @@ const Footer = () => {
         </Link>
         <nav>
           <ul className={styles.links}>
-            {navigationLinks.map((item) => (
-              <li key={item.text}>
-                <Link href={item.href} className={styles.link}>
-                  <Typography variant="body2">{item.text}</Typography>
-                </Link>
-              </li>
+            {t.raw("navigationLinks").map((item: NavigationLink) => (
+              <Link href={item.href} className={styles.link} key={item.text}>
+                <Typography variant="body2">{item.text}</Typography>
+              </Link>
             ))}
           </ul>
         </nav>

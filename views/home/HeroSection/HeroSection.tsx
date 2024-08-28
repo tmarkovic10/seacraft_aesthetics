@@ -57,7 +57,7 @@ const HeroSection = () => {
         <LinkButton
           href={`/#${sectionId}`}
           scrollHandler={scrollToSection}
-          text="Saznaj više"
+          text={t("learnMore")}
         />
       </div>
     </Container>

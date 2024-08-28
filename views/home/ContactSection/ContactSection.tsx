@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 import cx from "clsx";
 
@@ -15,6 +16,7 @@ interface ContactSectionProps {
 }
 
 const ContactSection = ({ isHome }: ContactSectionProps) => {
+  const t = useTranslations("HomePage");
   return (
     <Container
       component="section"
@@ -23,11 +25,10 @@ const ContactSection = ({ isHome }: ContactSectionProps) => {
     >
       <div className={styles.wrapper}>
         <Typography variant="h2" className={styles.title}>
-          Kontaktirajte nas
+          {t("contactTitle")}
         </Typography>
         <Typography variant="body1" className={styles.text}>
-          Za bilo kakva pitanja ili informacije, slobodno nas kontaktirajte
-          putem e-maila ili telefona
+          {t("contactSubtitle")}
         </Typography>
         <div className={styles.contactWrapper}>
           <Link href="tel:+385958710939" className={styles.contactItem}>
