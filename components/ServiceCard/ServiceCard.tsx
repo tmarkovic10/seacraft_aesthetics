@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 import cx from "clsx";
 
@@ -17,6 +18,7 @@ interface ServiceCardProps {
 }
 
 const ServiceCard = ({ id, title, image, fullWidth }: ServiceCardProps) => {
+  const t = useTranslations("HomePage");
   return (
     <div
       className={cx(styles.container, {
@@ -39,7 +41,7 @@ const ServiceCard = ({ id, title, image, fullWidth }: ServiceCardProps) => {
         </Typography>
       </div>
       <div className={styles.overlay}>
-        <LinkButton href={`/services/${id}`} text="Learn more" />
+        <LinkButton href={`/services/${id}`} text={t("learnMore")} />
       </div>
     </div>
   );
