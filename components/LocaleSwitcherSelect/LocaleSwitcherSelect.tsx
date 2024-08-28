@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useTransition } from "react";
+import { useEffect, useRef, useState, useTransition } from "react";
 
 import { Locale } from "@/config";
 import { setUserLocale } from "@/service/locale";
@@ -19,6 +19,7 @@ export default function LocaleSwitcher({ defaultValue, items }: Props) {
   const [isPending, startTransition] = useTransition();
   const [isOpen, setIsOpen] = useState(false);
   const [selectedLocale, setSelectedLocale] = useState(defaultValue);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   const onChange = (locale: Locale) => {
     setSelectedLocale(locale);
@@ -34,8 +35,24 @@ export default function LocaleSwitcher({ defaultValue, items }: Props) {
     setIsOpen(false);
   };
 
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setIsOpen(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
-    <div className={styles.languageSwitcher}>
+    <div className={styles.languageSwitcher} ref={dropdownRef}>
       <button onClick={toggleDropdown} className={styles.currentLanguage}>
         {selectedLocale === "hr" ? <Croatia /> : <English />}
       </button>

@@ -46,6 +46,8 @@ const Carousel: React.FC<PropType> = (props) => {
                 src={item.src}
                 alt={item.alt}
                 fill
+                priority
+                sizes="(max-width: 1025px) 100vw, 50vw"
                 style={{ objectFit: "cover" }}
               />
             </div>
