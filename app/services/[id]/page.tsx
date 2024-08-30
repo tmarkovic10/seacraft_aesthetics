@@ -8,6 +8,12 @@ import services, { Services } from "@/config/services";
 import OtherServicesSection from "@/views/Services/ServiceDetails/OtherServiceSection";
 import ContactSection from "@/views/home/ContactSection";
 
+export function generateStaticParams() {
+  return services.map((service) => ({
+    id: String(service.id),
+  }));
+}
+
 const ServiceDetailsPage = ({ params }: { params: { id: number } }) => {
   const { id } = params;
   const t = useTranslations("HomePage");
