@@ -8,6 +8,7 @@ import styles from "./Footer.module.scss";
 import { NavigationLink } from "@/config/navigationLinks";
 import Typography from "@/components/Typography";
 import Logo from "@/components/SvgIcons/Logo";
+import { getCurrentYear } from "@/utils/static/dateTime";
 
 const Footer = () => {
   const t = useTranslations("HomePage");
@@ -27,7 +28,7 @@ const Footer = () => {
           </ul>
         </nav>
         <Typography variant="body2" className={styles.copyright}>
-          Copyright @2024 Seacraft Aesthetic
+          Copyright {getCurrentYear()} Seacraft Aesthetic
         </Typography>
       </div>
     </Container>
